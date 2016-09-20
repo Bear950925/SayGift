@@ -1,4 +1,4 @@
-package dla.saygift.BuildActivity;
+package dla.saygift.buildactivity;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -38,8 +38,8 @@ public class MyFragmentPagerAdapter extends FragmentPagerAdapter{
         return arrayList.size();
     }
 
-    @Override
-    public CharSequence getPageTitle(int position) {
-        return titleList.get(position);
-    }
+//    @Override
+//    public CharSequence getPageTitle(int position) {
+//        return titleList.get(position);
+//    }
 }

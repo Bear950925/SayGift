@@ -1,4 +1,4 @@
-package dla.saygift.SharedPerferences;
+package dla.saygift.sharedpreferences;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

@@ -3,12 +3,13 @@
     package="dla.saygift" >
 
     <application
+        android:name=".MyApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/CustomTitle" >
-        <activity android:name=".BuildActivity.BuildActivity" >
+        <activity android:name=".buildactivity.BuildActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -16,11 +17,11 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".SharedPerferences.SharedPreferencesActivity" >
+        <activity android:name=".sharedpreferences.SharedPreferencesActivity" >
 
         </activity>
 
-        <activity android:name=".StartActivity.StartActivity" >
+        <activity android:name=".start.StartActivity" >
 
         </activity>
 

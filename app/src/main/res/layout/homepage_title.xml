@@ -6,26 +6,34 @@
     android:layout_height="50dp">
 
     <TextView
+        android:layout_marginLeft="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="4dp"
+        android:layout_gravity="center"
         android:text="礼物说"
         android:textColor="#ffffff"
-        android:textSize="21sp"
+        android:textSize="16sp"
         android:textStyle="bold"/>
 
     <EditText
+        android:id="@+id/base_ed"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginRight="20dp"
+        android:layout_gravity="center"
         android:layout_width="0dp"
+        android:hint="搜索"
+        android:focusableInTouchMode="false"
+        android:drawableLeft="@mipmap/icon_searched"
         android:layout_height="wrap_content"
         android:layout_weight="0.7"
         android:background="@drawable/shape_homepage_title"/>
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/ic_launcher"
+        android:layout_marginRight="15dp"
+        android:layout_gravity="center"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@mipmap/btn_signin"
         android:id="@+id/homepage_title_img"/>
 
 

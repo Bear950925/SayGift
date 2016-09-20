@@ -1,4 +1,4 @@
-package dla.saygift.BaseClass;
+package dla.saygift.baseclass;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

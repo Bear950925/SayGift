@@ -1,15 +1,16 @@
-package dla.saygift.HomePager;
+package dla.saygift.listpage;
 
-import dla.saygift.BaseClass.BaseFragment;
+import dla.saygift.baseclass.BaseFragment;
 import dla.saygift.R;
 
 /**
- * Created by dllo on 16/9/19.
+ * Created by dllo on 16/9/20.
  */
-public class HomePagerFragment extends BaseFragment {
+public class GiftPageFragment extends BaseFragment {
+
     @Override
     protected int setLayout() {
-        return R.layout.homepage;
+        return R.layout.listpage;
     }
 
     @Override

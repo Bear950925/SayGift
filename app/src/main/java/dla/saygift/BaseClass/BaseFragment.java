@@ -1,4 +1,4 @@
-package dla.saygift.BaseClass;
+package dla.saygift.baseclass;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -7,8 +7,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import dla.saygift.R;
 
 /**
  * Created by dllo on 16/9/19.

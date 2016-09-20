@@ -1,12 +1,10 @@
-package dla.saygift.StartActivity;
+package dla.saygift.start;
 
 import android.graphics.Bitmap;
 import android.os.AsyncTask;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.widget.ImageView;
 
-import dla.saygift.BaseClass.BaseFragmentActivity;
+import dla.saygift.baseclass.BaseFragmentActivity;
 import dla.saygift.R;
 
 public class StartActivity extends BaseFragmentActivity {
