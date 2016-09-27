@@ -1,19 +1,15 @@
 package dla.saygift.buildactivity;
 
-import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 
-import com.ashokvarma.bottomnavigation.BadgeItem;
 import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
 
 import dla.saygift.baseclass.BaseFragmentActivity;
-import dla.saygift.hompage.HomePagerFragment;
+import dla.saygift.hompage.basehomepage.HomePagerFragment;
 import dla.saygift.kindpage.KindPageFragment;
 import dla.saygift.listpage.GiftPageFragment;
 import dla.saygift.personpage.PersonPageFragment;
@@ -22,8 +18,8 @@ import dla.saygift.R;
 public class BuildActivity extends BaseFragmentActivity implements BottomNavigationBar.OnTabSelectedListener {
 
 
-    private ViewPager viewPager;
-    private TabLayout tabLayout;
+    //    private ViewPager viewPager;
+//    private TabLayout tabLayout;
     private FrameLayout frameLayout;
     //    private Button home, gift, kind, person;
     private BottomNavigationBar bottomNavigationBar;
@@ -59,15 +55,14 @@ public class BuildActivity extends BaseFragmentActivity implements BottomNavigat
 
         bottomNavigationBar.setTabSelectedListener(this);
 
-
     }
 
     public void buildBottomNavigationBar() {
 
-        bottomNavigationItem0 = new BottomNavigationItem(R.mipmap.ic_tab_home_normal, "首页").setActiveColor("#2b8fef");
-        bottomNavigationItem1 = new BottomNavigationItem(R.mipmap.ic_tab_gift_normal, "榜单").setActiveColor("#84c661");
-        bottomNavigationItem2 = new BottomNavigationItem(R.mipmap.ic_tab_category_normal, "分类").setActiveColor("#9C76B2");
-        bottomNavigationItem3 = new BottomNavigationItem(R.mipmap.ic_tab_profile_normal, "我").setActiveColor("#ffc64e");
+        bottomNavigationItem0 = new BottomNavigationItem(R.mipmap.ic_tab_home_normal, "首页").setActiveColor("#00CCFF");
+        bottomNavigationItem1 = new BottomNavigationItem(R.mipmap.ic_tab_gift_normal, "榜单").setActiveColor("#F1ADA2");
+        bottomNavigationItem2 = new BottomNavigationItem(R.mipmap.ic_tab_category_normal, "分类").setActiveColor("#F79AB5");
+        bottomNavigationItem3 = new BottomNavigationItem(R.mipmap.ic_tab_profile_normal, "我").setActiveColor("#FEF143");
 
         bottomNavigationBar.addItem(bottomNavigationItem0)
                 .addItem(bottomNavigationItem1)
@@ -80,8 +75,6 @@ public class BuildActivity extends BaseFragmentActivity implements BottomNavigat
     }
 
     public void setDefaultFragment() {
-
-
 
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
@@ -98,10 +91,7 @@ public class BuildActivity extends BaseFragmentActivity implements BottomNavigat
 
         switch (position) {
             case 0:
-                bottomNavigationBar.removeItem(bottomNavigationItem1);
-                if (homePagerFragment == null) {
-                    homePagerFragment = new HomePagerFragment();
-                }
+                homePagerFragment = new HomePagerFragment();
                 transaction.replace(R.id.base_frame, homePagerFragment);
                 break;
             case 1:

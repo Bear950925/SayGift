@@ -1,5 +1,7 @@
 package dla.saygift.listpage;
 
+import android.widget.TextView;
+
 import dla.saygift.baseclass.BaseFragment;
 import dla.saygift.R;
 
@@ -8,6 +10,8 @@ import dla.saygift.R;
  */
 public class GiftPageFragment extends BaseFragment {
 
+    private TextView textView;
+
     @Override
     protected int setLayout() {
         return R.layout.listpage;
@@ -15,7 +19,7 @@ public class GiftPageFragment extends BaseFragment {
 
     @Override
     protected void initView() {
-
+        textView = bindView(R.id.listpage_tv);
     }
 
     @Override
