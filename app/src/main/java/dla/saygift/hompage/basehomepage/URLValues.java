@@ -8,5 +8,6 @@ public class URLValues {
     public static final String SEARCH_URL = "http://api.liwushuo.com/v2/search/hot_words_v2";
     public static final String COLUMNS_URL = "http://api.liwushuo.com/v2/channels/preset?gender=1&generation=2";
     public static final String BANNER_URL = "http://api.liwushuo.com/v2/banners?channel=iOS";
+    public static final String SECOND_BANNER_URL = "http://api.liwushuo.com/v2/secondary_banners?gender=1&generation=2";
 
 }

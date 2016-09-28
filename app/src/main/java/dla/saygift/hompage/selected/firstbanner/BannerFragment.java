@@ -1,11 +1,8 @@
-package dla.saygift.hompage.selected.banner;
+package dla.saygift.hompage.selected.firstbanner;
 
 import android.widget.ImageView;
 
-import com.android.volley.toolbox.StringRequest;
 import com.bumptech.glide.Glide;
-
-import java.util.ArrayList;
 
 import dla.saygift.MyApp;
 import dla.saygift.R;

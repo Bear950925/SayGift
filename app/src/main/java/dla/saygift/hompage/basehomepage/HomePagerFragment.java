@@ -19,7 +19,7 @@ import java.util.ArrayList;
 
 import dla.saygift.baseclass.BaseFragment;
 import dla.saygift.R;
-import dla.saygift.hompage.selected.SelectedColumns;
+import dla.saygift.hompage.selected.baseselected.SelectedColumns;
 import dla.saygift.hompage.togirlfriend.ToGirlfrien;
 import dla.saygift.volleysingle.VolleySingleTon;
 

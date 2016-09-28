@@ -52,7 +52,6 @@ public class BuildActivity extends BaseFragmentActivity implements BottomNavigat
 
         setDefaultFragment();
         buildBottomNavigationBar();
-
         bottomNavigationBar.setTabSelectedListener(this);
 
     }
@@ -91,7 +90,9 @@ public class BuildActivity extends BaseFragmentActivity implements BottomNavigat
 
         switch (position) {
             case 0:
-                homePagerFragment = new HomePagerFragment();
+                if (homePagerFragment == null) {
+                    homePagerFragment = new HomePagerFragment();
+                }
                 transaction.replace(R.id.base_frame, homePagerFragment);
                 break;
             case 1:

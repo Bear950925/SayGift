@@ -1,28 +1,35 @@
-package dla.saygift.hompage.selected;
+package dla.saygift.hompage.selected.baseselected;
 
 import android.os.Handler;
 import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.bumptech.glide.Glide;
 import com.google.gson.Gson;
 
 import java.util.ArrayList;
 
+import dla.saygift.MyApp;
 import dla.saygift.R;
 import dla.saygift.baseclass.BaseFragment;
 import dla.saygift.hompage.basehomepage.URLValues;
-import dla.saygift.hompage.selected.banner.BannerBean;
-import dla.saygift.hompage.selected.banner.BannerFragment;
+import dla.saygift.hompage.selected.firstbanner.BannerBean;
+import dla.saygift.hompage.selected.firstbanner.BannerFragment;
+import dla.saygift.hompage.selected.secondbanner.SecondBannerBean;
 import dla.saygift.volleysingle.VolleySingleTon;
 
 /**
@@ -34,6 +41,8 @@ public class SelectedColumns extends BaseFragment implements View.OnClickListene
 
     private ViewPager viewPager;
     private ArrayList<TextView> textViews = new ArrayList<>();
+    private LinearLayout homepage_secondbanner_ll;
+    private RecyclerView recyclerView;
 
     @Override
     protected int setLayout() {
@@ -57,12 +66,15 @@ public class SelectedColumns extends BaseFragment implements View.OnClickListene
 
         viewPager = bindView(R.id.homepage_selected_vp);
 
+        recyclerView = bindView(R.id.homepage_selected_rv);
+
     }
 
     @Override
     protected void initData() {
         
         setBanner();
+        setSecondBanner();
         
     }
     
@@ -94,7 +106,7 @@ public class SelectedColumns extends BaseFragment implements View.OnClickListene
                 bannerFragment.setImgUrl(bannerBean.getData().getBanners().get(0).getImage_url());
                 arrayList.add(bannerFragment);
 
-                BannerAdapter bannerAdapter = new BannerAdapter(getChildFragmentManager());
+                FirstBannerAdapter bannerAdapter = new FirstBannerAdapter(getChildFragmentManager());
                 bannerAdapter.setBanners(arrayList);
                 viewPager.setAdapter(bannerAdapter);
                 VisibilityDot(viewPager.getAdapter().getCount() - 2);
@@ -129,6 +141,15 @@ public class SelectedColumns extends BaseFragment implements View.OnClickListene
                             case 5:
                                 SelectedDot(4);
                                 break;
+                            case 6:
+                                SelectedDot(5);
+                                break;
+                            case 7:
+                                SelectedDot(6);
+                                break;
+                                default:
+                                    Toast.makeText(mContext, "DotView不够, 请添加", Toast.LENGTH_SHORT).show();
+                                    break;
                         }
                     }
 
@@ -246,4 +267,44 @@ public class SelectedColumns extends BaseFragment implements View.OnClickListene
         }
         startScroll();
     }
+
+    public void setSecondBanner() {
+
+        StringRequest stringRequest = new StringRequest(URLValues.SECOND_BANNER_URL, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+
+                Gson gson = new Gson();
+
+                SecondBannerBean bannerBean = gson.fromJson(response, SecondBannerBean.class);
+
+                SecondBannerAdapter secondBannerAdapter = new SecondBannerAdapter();
+                secondBannerAdapter.setSecondBannerBean(bannerBean);
+                LinearLayoutManager manager = new LinearLayoutManager(MyApp.getmContext());
+                manager.setOrientation(manager.HORIZONTAL);
+                recyclerView.setLayoutManager(manager);
+                recyclerView.setAdapter(secondBannerAdapter);
+
+                recyclerView.setOnTouchListener(new View.OnTouchListener() {
+                    @Override
+                    public boolean onTouch(View v, MotionEvent event) {
+
+                        recyclerView.getParent().requestDisallowInterceptTouchEvent(true);
+
+                        return false;
+                    }
+                });
+
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+        });
+
+        VolleySingleTon.getInstance().addQueue(stringRequest);
+
+    }
+
 }

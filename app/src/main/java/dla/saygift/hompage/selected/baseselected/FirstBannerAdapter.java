@@ -1,4 +1,4 @@
-package dla.saygift.hompage.selected;
+package dla.saygift.hompage.selected.baseselected;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -9,7 +9,7 @@ import java.util.ArrayList;
 /**
  * Created by dllo on 16/9/27.
  */
-public class BannerAdapter extends FragmentPagerAdapter{
+public class FirstBannerAdapter extends FragmentPagerAdapter{
 
     ArrayList<Fragment> banners = new ArrayList();
 
@@ -17,7 +17,7 @@ public class BannerAdapter extends FragmentPagerAdapter{
         this.banners = banners;
     }
 
-    public BannerAdapter(FragmentManager fm) {
+    public FirstBannerAdapter(FragmentManager fm) {
         super(fm);
     }
 

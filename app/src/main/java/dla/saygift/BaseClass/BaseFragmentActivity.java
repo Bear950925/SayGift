@@ -15,7 +15,6 @@ public abstract class   BaseFragmentActivity extends FragmentActivity{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(setLayout());
-        Log.d("BaseFragmentActivity", "setLayout():" + setLayout());
 
         initView();
         initData();

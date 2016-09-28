@@ -1,4 +1,4 @@
-package dla.saygift.hompage.selected.banner;
+package dla.saygift.hompage.selected.firstbanner;
 
 import java.util.List;
 
