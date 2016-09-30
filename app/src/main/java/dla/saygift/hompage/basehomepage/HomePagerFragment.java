@@ -19,7 +19,7 @@ import java.util.ArrayList;
 
 import dla.saygift.baseclass.BaseFragment;
 import dla.saygift.R;
-import dla.saygift.hompage.selected.baseselected.SelectedColumns;
+import dla.saygift.hompage.selected.baseselected.BaseSelected;
 import dla.saygift.hompage.togirlfriend.ToGirlfrien;
 import dla.saygift.volleysingle.VolleySingleTon;
 
@@ -92,16 +92,18 @@ public class HomePagerFragment extends BaseFragment {
                     object = object.getJSONObject("data");
                     JSONArray jsonArray = object.getJSONArray("candidates");
 
+                    arrayList.clear();
                     for (int i = 0; i < jsonArray.length(); i++) {
                         arrayList.add(jsonArray.getJSONObject(i).getString("name"));
                     }
 
                     HomePagerFragmentAdapter homePagerFragmentAdapter = new HomePagerFragmentAdapter(getChildFragmentManager());
+                    fragments.clear();
 
                     for (int i = 0; i < arrayList.size(); i++) {
                         switch (i) {
                             case 0:
-                                fragments.add(new SelectedColumns());
+                                fragments.add(new BaseSelected());
                                 break;
                             default:
                                 fragments.add(new ToGirlfrien());
@@ -112,6 +114,7 @@ public class HomePagerFragment extends BaseFragment {
                     homePagerFragmentAdapter.setTitles(arrayList);
                     vp.setAdapter(homePagerFragmentAdapter);
                     tb.setupWithViewPager(vp);
+
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }

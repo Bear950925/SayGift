@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Created by dllo on 16/9/27.
  */
-public class BannerBean {
+public class FirstBannerBean {
 
     /**
      * 轮播图接口 public static final String BANNER_URL 来自 basehomepage.URLValues;

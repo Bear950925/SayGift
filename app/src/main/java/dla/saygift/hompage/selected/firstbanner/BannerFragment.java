@@ -22,7 +22,7 @@ public class BannerFragment extends BaseFragment {
 
     @Override
     protected int setLayout() {
-        return R.layout.homepage_selected_banner;
+        return R.layout.homepage_selected_banner_view;
     }
 
     @Override

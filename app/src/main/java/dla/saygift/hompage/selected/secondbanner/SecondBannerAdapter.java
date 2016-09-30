@@ -1,4 +1,4 @@
-package dla.saygift.hompage.selected.baseselected;
+package dla.saygift.hompage.selected.secondbanner;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -10,7 +10,6 @@ import com.bumptech.glide.Glide;
 
 import dla.saygift.MyApp;
 import dla.saygift.R;
-import dla.saygift.hompage.selected.secondbanner.SecondBannerBean;
 
 /**
  * Created by dllo on 16/9/28.
@@ -26,7 +25,7 @@ public class SecondBannerAdapter extends RecyclerView.Adapter<SecondBannerAdapte
     @Override
     public SecondBannerAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        View view = LayoutInflater.from(MyApp.getmContext()).inflate(R.layout.homepage_selecte_secondbanner, null);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.homepage_selected_secondbanner_view, parent, false);
 
         ViewHolder viewHolder = new ViewHolder(view);
 
