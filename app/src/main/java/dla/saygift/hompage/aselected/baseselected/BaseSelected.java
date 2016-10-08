@@ -1,9 +1,8 @@
-package dla.saygift.hompage.selected.baseselected;
+package dla.saygift.hompage.aselected.baseselected;
 
 import android.content.Context;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -12,13 +11,13 @@ import com.google.gson.Gson;
 
 import dla.saygift.R;
 import dla.saygift.baseclass.BaseFragment;
-import dla.saygift.hompage.basehomepage.URLValues;
-import dla.saygift.hompage.selected.firstbanner.FirstBannerAdapter;
-import dla.saygift.hompage.selected.firstbanner.FirstBannerBean;
-import dla.saygift.hompage.selected.secondbanner.SecondBannerAdapter;
-import dla.saygift.hompage.selected.secondbanner.SecondBannerBean;
-import dla.saygift.hompage.selected.thirdchannels.ThirdChannelsBean;
-import dla.saygift.hompage.selected.thirdchannels.ThirdChannelsSelectedBean;
+import dla.saygift.hompage.abasehomepage.URLValues;
+import dla.saygift.hompage.aselected.firstbanner.FirstBannerAdapter;
+import dla.saygift.hompage.aselected.firstbanner.FirstBannerBean;
+import dla.saygift.hompage.aselected.secondbanner.SecondBannerAdapter;
+import dla.saygift.hompage.aselected.secondbanner.SecondBannerBean;
+import dla.saygift.hompage.aselected.thirdchannels.ThirdChannelsBean;
+import dla.saygift.hompage.aselected.thirdchannels.ThirdChannelsSelectedBean;
 import dla.saygift.volleysingle.VolleySingleTon;
 
 /**
@@ -131,85 +130,85 @@ public class BaseSelected extends BaseFragment {
                     try {
                         thirdChannelsSelectedBean.getHomepage_selected_channels_columns_category()
                                 .add(thirdChannelsBean.getData().getItems().get(i).getColumn().getCategory());
-                        Log.d("SelectedColumns", "homepage_selected_channels_columns_category:" +
-                                thirdChannelsSelectedBean.getHomepage_selected_channels_columns_category().get(i));
+//                        Log.d("SelectedColumns", "homepage_selected_channels_columns_category:" +
+//                                thirdChannelsSelectedBean.getHomepage_selected_channels_columns_category().get(i));
                     } catch (NullPointerException e) {
                         thirdChannelsSelectedBean.getHomepage_selected_channels_columns_category()
                                 .add(null);
-                        Log.d("SelectedColumns", "homepage_selected_channels_columns_category:" +
-                                thirdChannelsSelectedBean.getHomepage_selected_channels_columns_category().get(i));
+//                        Log.d("SelectedColumns", "homepage_selected_channels_columns_category:" +
+//                                thirdChannelsSelectedBean.getHomepage_selected_channels_columns_category().get(i));
                     }
 
                     try {
                         thirdChannelsSelectedBean.getHomepage_selected_channels_columns_title()
                                 .add(thirdChannelsBean.getData().getItems().get(i).getColumn().getTitle());
-                        Log.d("SelectedColumns", "homepage_selected_channels_columns_title:" +
-                                thirdChannelsSelectedBean.getHomepage_selected_channels_columns_title().get(i));
+//                        Log.d("SelectedColumns", "homepage_selected_channels_columns_title:" +
+//                                thirdChannelsSelectedBean.getHomepage_selected_channels_columns_title().get(i));
                     } catch (NullPointerException e) {
                         thirdChannelsSelectedBean.getHomepage_selected_channels_columns_title()
                                 .add(null);
-                        Log.d("SelectedColumns", "homepage_selected_channels_columns_title:" +
-                                thirdChannelsSelectedBean.getHomepage_selected_channels_columns_title().get(i));
+//                        Log.d("SelectedColumns", "homepage_selected_channels_columns_title:" +
+//                                thirdChannelsSelectedBean.getHomepage_selected_channels_columns_title().get(i));
                     }
 
                     try {
                         thirdChannelsSelectedBean.getHomepage_selected_channels_author_avatar_url()
                                 .add(thirdChannelsBean.getData().getItems().get(i).getAuthor().getAvatar_url());
-                        Log.d("SelectedColumns", "homepage_selected_channels_author_avatar_url:" +
-                                thirdChannelsSelectedBean.getHomepage_selected_channels_author_avatar_url().get(i));
+//                        Log.d("SelectedColumns", "homepage_selected_channels_author_avatar_url:" +
+//                                thirdChannelsSelectedBean.getHomepage_selected_channels_author_avatar_url().get(i));
                     } catch (NullPointerException e) {
                         thirdChannelsSelectedBean.getHomepage_selected_channels_author_avatar_url()
                                 .add(null);
-                        Log.d("SelectedColumns", "homepage_selected_channels_author_avatar_url:" +
-                                thirdChannelsSelectedBean.getHomepage_selected_channels_author_avatar_url().get(i));
+//                        Log.d("SelectedColumns", "homepage_selected_channels_author_avatar_url:" +
+//                                thirdChannelsSelectedBean.getHomepage_selected_channels_author_avatar_url().get(i));
                     }
 
                     try {
                         thirdChannelsSelectedBean.getHomepage_selected_channels_author_nickname()
                                 .add(thirdChannelsBean.getData().getItems().get(i).getAuthor().getNickname());
-                        Log.d("SelectedColumns", "homepage_selected_channels_author_nickname:" +
-                                thirdChannelsSelectedBean.getHomepage_selected_channels_author_nickname().get(i));
+//                        Log.d("SelectedColumns", "homepage_selected_channels_author_nickname:" +
+//                                thirdChannelsSelectedBean.getHomepage_selected_channels_author_nickname().get(i));
                     } catch (NullPointerException e) {
                         thirdChannelsSelectedBean.getHomepage_selected_channels_author_nickname()
                                 .add(null);
-                        Log.d("SelectedColumns", "homepage_selected_channels_author_nickname:" +
-                                thirdChannelsSelectedBean.getHomepage_selected_channels_author_nickname().get(i));
+//                        Log.d("SelectedColumns", "homepage_selected_channels_author_nickname:" +
+//                                thirdChannelsSelectedBean.getHomepage_selected_channels_author_nickname().get(i));
                     }
 
                     try {
                         thirdChannelsSelectedBean.getHomepage_selected_channels_Cover_img_url()
                                 .add(thirdChannelsBean.getData().getItems().get(i).getCover_webp_url());
-                        Log.d("SelectedColumns", "homepage_selected_channels_Cover_img_url:" +
-                                thirdChannelsSelectedBean.getHomepage_selected_channels_Cover_img_url().get(i));
+//                        Log.d("SelectedColumns", "homepage_selected_channels_Cover_img_url:" +
+//                                thirdChannelsSelectedBean.getHomepage_selected_channels_Cover_img_url().get(i));
                     } catch (NullPointerException e) {
                         thirdChannelsSelectedBean.getHomepage_selected_channels_Cover_img_url()
                                 .add(null);
-                        Log.d("SelectedColumns", "homepage_selected_channels_Cover_img_url:" +
-                                thirdChannelsSelectedBean.getHomepage_selected_channels_Cover_img_url().get(i));
+//                        Log.d("SelectedColumns", "homepage_selected_channels_Cover_img_url:" +
+//                                thirdChannelsSelectedBean.getHomepage_selected_channels_Cover_img_url().get(i));
                     }
 
                     try {
                         thirdChannelsSelectedBean.getHomepage_selected_channels_title()
                                 .add(thirdChannelsBean.getData().getItems().get(i).getTitle());
-                        Log.d("SelectedColumns", "homepage_selected_channels_title:" +
-                                thirdChannelsSelectedBean.getHomepage_selected_channels_title().get(i));
+//                        Log.d("SelectedColumns", "homepage_selected_channels_title:" +
+//                                thirdChannelsSelectedBean.getHomepage_selected_channels_title().get(i));
                     } catch (NullPointerException e) {
                         thirdChannelsSelectedBean.getHomepage_selected_channels_title()
                                 .add(null);
-                        Log.d("SelectedColumns", "homepage_selected_channels_title:" +
-                                thirdChannelsSelectedBean.getHomepage_selected_channels_title().get(i));
+//                        Log.d("SelectedColumns", "homepage_selected_channels_title:" +
+//                                thirdChannelsSelectedBean.getHomepage_selected_channels_title().get(i));
                     }
 
                     try {
                         thirdChannelsSelectedBean.getHomepage_selected_channels_like_counts_tv()
                                 .add(String.valueOf(thirdChannelsBean.getData().getItems().get(i).getLikes_count()));
-                        Log.d("SelectedColumns", "homepage_selected_channels_like_counts_tv:" +
-                                thirdChannelsSelectedBean.getHomepage_selected_channels_like_counts_tv().get(i));
+//                        Log.d("SelectedColumns", "homepage_selected_channels_like_counts_tv:" +
+//                                thirdChannelsSelectedBean.getHomepage_selected_channels_like_counts_tv().get(i));
                     } catch (NullPointerException e) {
                         thirdChannelsSelectedBean.getHomepage_selected_channels_like_counts_tv()
                                 .add(null);
-                        Log.d("SelectedColumns", "homepage_selected_channels_like_counts_tv:" +
-                                thirdChannelsSelectedBean.getHomepage_selected_channels_like_counts_tv().get(i));
+//                        Log.d("SelectedColumns", "homepage_selected_channels_like_counts_tv:" +
+//                                thirdChannelsSelectedBean.getHomepage_selected_channels_like_counts_tv().get(i));
                     }
 
                 }

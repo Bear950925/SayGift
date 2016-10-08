@@ -1,4 +1,4 @@
-package dla.saygift.hompage.selected.firstbanner;
+package dla.saygift.hompage.aselected.firstbanner;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

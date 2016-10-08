@@ -1,4 +1,4 @@
-package dla.saygift.hompage.basehomepage;
+package dla.saygift.hompage.abasehomepage;
 
 import java.util.List;
 

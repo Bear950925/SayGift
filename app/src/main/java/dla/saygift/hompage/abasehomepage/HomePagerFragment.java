@@ -1,4 +1,4 @@
-package dla.saygift.hompage.basehomepage;
+package dla.saygift.hompage.abasehomepage;
 
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -19,8 +19,8 @@ import java.util.ArrayList;
 
 import dla.saygift.baseclass.BaseFragment;
 import dla.saygift.R;
-import dla.saygift.hompage.selected.baseselected.BaseSelected;
-import dla.saygift.hompage.togirlfriend.ToGirlfrien;
+import dla.saygift.hompage.aselected.baseselected.BaseSelected;
+import dla.saygift.hompage.channels.AnotherChannels;
 import dla.saygift.volleysingle.VolleySingleTon;
 
 /**
@@ -90,7 +90,7 @@ public class HomePagerFragment extends BaseFragment {
                 try {
                     object = new JSONObject(response);
                     object = object.getJSONObject("data");
-                    JSONArray jsonArray = object.getJSONArray("candidates");
+                    JSONArray jsonArray = object.getJSONArray("channels");
 
                     arrayList.clear();
                     for (int i = 0; i < jsonArray.length(); i++) {
@@ -106,7 +106,9 @@ public class HomePagerFragment extends BaseFragment {
                                 fragments.add(new BaseSelected());
                                 break;
                             default:
-                                fragments.add(new ToGirlfrien());
+                                AnotherChannels anotherChannels = new AnotherChannels(i);
+                                fragments.add(anotherChannels);
+                                break;
                         }
                     }
 
@@ -114,6 +116,7 @@ public class HomePagerFragment extends BaseFragment {
                     homePagerFragmentAdapter.setTitles(arrayList);
                     vp.setAdapter(homePagerFragmentAdapter);
                     tb.setupWithViewPager(vp);
+                    vp.setOffscreenPageLimit(arrayList.size());
 
                 } catch (JSONException e) {
                     e.printStackTrace();

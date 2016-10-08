@@ -9,7 +9,7 @@ import com.ashokvarma.bottomnavigation.BottomNavigationBar;
 import com.ashokvarma.bottomnavigation.BottomNavigationItem;
 
 import dla.saygift.baseclass.BaseFragmentActivity;
-import dla.saygift.hompage.basehomepage.HomePagerFragment;
+import dla.saygift.hompage.abasehomepage.HomePagerFragment;
 import dla.saygift.kindpage.KindPageFragment;
 import dla.saygift.listpage.GiftPageFragment;
 import dla.saygift.personpage.PersonPageFragment;

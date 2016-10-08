@@ -1,6 +1,4 @@
-package dla.saygift.hompage.selected.thirdchannels;
-
-import android.util.Log;
+package dla.saygift.hompage.aselected.thirdchannels;
 
 import java.util.ArrayList;
 
@@ -9,13 +7,13 @@ import java.util.ArrayList;
  */
 public class ThirdChannelsSelectedBean {
 
-    ArrayList<String> homepage_selected_channels_columns_category = new ArrayList<>();
-    ArrayList<String> homepage_selected_channels_columns_title = new ArrayList<>();
-    ArrayList<String> homepage_selected_channels_author_avatar_url = new ArrayList<>();
-    ArrayList<String> homepage_selected_channels_author_nickname = new ArrayList<>();
-    ArrayList<String> homepage_selected_channels_Cover_img_url = new ArrayList<>();
-    ArrayList<String> homepage_selected_channels_title = new ArrayList<>();
-    ArrayList<String> homepage_selected_channels_like_counts_tv = new ArrayList<>();
+    private ArrayList<String> homepage_selected_channels_columns_category = new ArrayList<>();
+    private ArrayList<String> homepage_selected_channels_columns_title = new ArrayList<>();
+    private ArrayList<String> homepage_selected_channels_author_avatar_url = new ArrayList<>();
+    private ArrayList<String> homepage_selected_channels_author_nickname = new ArrayList<>();
+    private ArrayList<String> homepage_selected_channels_Cover_img_url = new ArrayList<>();
+    private ArrayList<String> homepage_selected_channels_title = new ArrayList<>();
+    private ArrayList<String> homepage_selected_channels_like_counts_tv = new ArrayList<>();
 
     public ArrayList<String> getHomepage_selected_channels_columns_category() {
         return homepage_selected_channels_columns_category;

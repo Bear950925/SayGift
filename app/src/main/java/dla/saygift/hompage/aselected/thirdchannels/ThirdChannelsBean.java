@@ -1,4 +1,4 @@
-package dla.saygift.hompage.selected.thirdchannels;
+package dla.saygift.hompage.aselected.thirdchannels;
 
 import java.util.List;
 

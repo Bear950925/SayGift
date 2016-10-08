@@ -1,4 +1,4 @@
-package dla.saygift.hompage.selected.baseselected;
+package dla.saygift.hompage.aselected.baseselected;
 
 import android.content.Context;
 import android.os.Handler;
@@ -21,12 +21,12 @@ import java.util.ArrayList;
 
 import dla.saygift.MyApp;
 import dla.saygift.R;
-import dla.saygift.hompage.selected.firstbanner.BannerFragment;
-import dla.saygift.hompage.selected.firstbanner.FirstBannerAdapter;
-import dla.saygift.hompage.selected.firstbanner.FirstBannerBean;
-import dla.saygift.hompage.selected.secondbanner.SecondBannerAdapter;
-import dla.saygift.hompage.selected.secondbanner.SecondBannerBean;
-import dla.saygift.hompage.selected.thirdchannels.ThirdChannelsSelectedBean;
+import dla.saygift.hompage.aselected.firstbanner.BannerFragment;
+import dla.saygift.hompage.aselected.firstbanner.FirstBannerAdapter;
+import dla.saygift.hompage.aselected.firstbanner.FirstBannerBean;
+import dla.saygift.hompage.aselected.secondbanner.SecondBannerAdapter;
+import dla.saygift.hompage.aselected.secondbanner.SecondBannerBean;
+import dla.saygift.hompage.aselected.thirdchannels.ThirdChannelsSelectedBean;
 
 /**
  * Created by dllo on 16/9/30.
@@ -59,12 +59,12 @@ public class BaseSelectAdapter extends RecyclerView.Adapter {
 
     public void setFirstBannerBean(FirstBannerBean firstBannerBean) {
         this.firstBannerBean = firstBannerBean;
-        Log.d("BaseSelectAdapter", "firstBannerBean.getData().getBanners().size():" + firstBannerBean.getData().getBanners().size());
+//        Log.d("BaseSelectAdapter", "firstBannerBean.getData().getBanners().size():" + firstBannerBean.getData().getBanners().size());
     }
 
     public void setFirstBannerAdapter(FirstBannerAdapter firstBannerAdapter) {
         this.firstBannerAdapter = firstBannerAdapter;
-        Log.d("BaseSelectAdapter", "firstBannerAdapter:" + firstBannerAdapter);
+//        Log.d("BaseSelectAdapter", "firstBannerAdapter:" + firstBannerAdapter);
     }
 
     public BaseSelectAdapter(Context context) {
@@ -129,8 +129,9 @@ public class BaseSelectAdapter extends RecyclerView.Adapter {
 
     }
 
-    public void setBanner(final FirstBannerViewHolder firstBannerViewHolder) {
 
+    public void setBanner(final FirstBannerViewHolder firstBannerViewHolder) {
+        Log.d("zzzz", "-----");
         ArrayList<Fragment> arrayList = new ArrayList<>();
 
         BannerFragment bannerFragment = null;
@@ -332,7 +333,7 @@ public class BaseSelectAdapter extends RecyclerView.Adapter {
 
     @Override
     public int getItemCount() {
-        return thirdChannelsSelectedBean.getHomepage_selected_channels_Cover_img_url().size() + 1;
+        return thirdChannelsSelectedBean.getHomepage_selected_channels_Cover_img_url().size() + 2;
     }
 
     private class FirstBannerViewHolder extends RecyclerView.ViewHolder {
