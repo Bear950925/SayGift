@@ -43,6 +43,8 @@ public class BaseSelectAdapter extends RecyclerView.Adapter {
 
     private ThirdChannelsSelectedBean thirdChannelsSelectedBean;
 
+    private Handler handler;
+
     public void setThirdChannelsSelectedBean(ThirdChannelsSelectedBean thirdChannelsSelectedBean) {
         this.thirdChannelsSelectedBean = thirdChannelsSelectedBean;
     }
@@ -54,8 +56,6 @@ public class BaseSelectAdapter extends RecyclerView.Adapter {
     public void setSecondBannerBean(SecondBannerBean secondBannerBean) {
         this.secondBannerBean = secondBannerBean;
     }
-
-    private Handler handler;
 
     public void setFirstBannerBean(FirstBannerBean firstBannerBean) {
         this.firstBannerBean = firstBannerBean;
@@ -129,15 +129,13 @@ public class BaseSelectAdapter extends RecyclerView.Adapter {
 
     }
 
-
     public void setBanner(final FirstBannerViewHolder firstBannerViewHolder) {
-        Log.d("zzzz", "-----");
         ArrayList<Fragment> arrayList = new ArrayList<>();
 
         BannerFragment bannerFragment = null;
 
         bannerFragment = new BannerFragment();
-        bannerFragment.setImgUrl(firstBannerBean.getData().getBanners().get(firstBannerBean.getData().getBanners().size() - 1).getImage_url());
+        bannerFragment.setImgUrl(firstBannerBean.getData().getBanners().get(firstBannerBean.getData().getBanners().size() - 1).getWebp_url());
         arrayList.add(bannerFragment);
         for (int i = 0; i < firstBannerBean.getData().getBanners().size(); i++) {
             bannerFragment = new BannerFragment();
@@ -306,7 +304,6 @@ public class BaseSelectAdapter extends RecyclerView.Adapter {
         setImgAndText(null, null, thirdChannelsViewHolder.homepage_selected_channels_like_counts_tv, thirdChannelsSelectedBean.getHomepage_selected_channels_like_counts_tv().get(position));
 
     }
-
 
     public void setImgAndText(ImageView imageView, String imgUrl, TextView textView, String tv) {
 

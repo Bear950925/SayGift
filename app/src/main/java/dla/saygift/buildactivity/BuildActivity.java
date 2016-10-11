@@ -17,11 +17,7 @@ import dla.saygift.R;
 
 public class BuildActivity extends BaseFragmentActivity implements BottomNavigationBar.OnTabSelectedListener {
 
-
-    //    private ViewPager viewPager;
-//    private TabLayout tabLayout;
     private FrameLayout frameLayout;
-    //    private Button home, gift, kind, person;
     private BottomNavigationBar bottomNavigationBar;
 
     private HomePagerFragment homePagerFragment;
