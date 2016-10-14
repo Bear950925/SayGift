@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ListView;
 
 import com.bumptech.glide.Glide;
 
@@ -17,6 +18,7 @@ import dla.saygift.R;
 public class SecondBannerAdapter extends RecyclerView.Adapter<SecondBannerAdapter.ViewHolder>{
 
     private SecondBannerBean secondBannerBean;
+    private ListView listView;
 
     public void setSecondBannerBean(SecondBannerBean secondBannerBean) {
         this.secondBannerBean = secondBannerBean;
@@ -24,6 +26,8 @@ public class SecondBannerAdapter extends RecyclerView.Adapter<SecondBannerAdapte
 
     @Override
     public SecondBannerAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+
+
 
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.homepage_selected_secondbanner_view, parent, false);
 

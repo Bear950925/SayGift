@@ -1,11 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <android.support.design.widget.TabLayout
+
+        android:id="@+id/kindpage_tb"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="这是分类页"/>
+        app:tabMaxWidth="70dp"
+        android:background="#23ff0000"
+        app:tabSelectedTextColor="#FF0000"
+        app:tabIndicatorColor="#FF0000">
+
+    </android.support.design.widget.TabLayout>
+
+    <include layout="@layout/kindpage_raiders_title" android:id="@+id/kindpage_title"/>
+
+    <android.support.v4.view.ViewPager
+
+        android:id="@+id/kindpage_vp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+    </android.support.v4.view.ViewPager>
 
 </LinearLayout>

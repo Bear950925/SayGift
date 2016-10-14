@@ -37,7 +37,7 @@ public class HomePagerFragment extends BaseFragment {
 
     @Override
     protected int setLayout() {
-        return R.layout.homepage_base;
+        return R.layout.homepage;
     }
 
     @Override
