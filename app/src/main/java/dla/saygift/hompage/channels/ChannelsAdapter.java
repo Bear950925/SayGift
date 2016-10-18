@@ -81,6 +81,7 @@ public class ChannelsAdapter extends RecyclerView.Adapter<ChannelsAdapter.ViewHo
     @Override
     public int getItemCount() {
         return channelsSelectedBean.getHomepage_another_channels_author_nickname().size();
+//        return 10;
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {

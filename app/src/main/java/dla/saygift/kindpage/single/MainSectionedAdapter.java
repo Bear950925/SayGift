@@ -6,11 +6,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+
+import java.util.ArrayList;
+
+import dla.saygift.MyApp;
 import dla.saygift.R;
 
 /**
@@ -22,18 +28,19 @@ import dla.saygift.R;
 public class MainSectionedAdapter extends SectionedBaseAdapter {
 
     private Context mContext;
-    private String[] leftStr;
-    private String[][] rightStr;
 
-    public MainSectionedAdapter(Context context, String[] leftStr, String[][] rightStr) {
+    ArrayList<String> leftItems;
+    ArrayList<singleItemsbean> rightCate;
+
+    public MainSectionedAdapter(Context context, ArrayList<String>  leftStr, ArrayList<singleItemsbean> rightStr) {
         this.mContext = context;
-        this.leftStr = leftStr;
-        this.rightStr = rightStr;
+        this.leftItems = leftStr;
+        this.rightCate = rightStr;
     }
 
     @Override
     public Object getItem(int section, int position) {
-        return rightStr[section][position];
+        return rightCate.get(section).getCategoryName();
     }
 
     @Override
@@ -43,12 +50,12 @@ public class MainSectionedAdapter extends SectionedBaseAdapter {
 
     @Override
     public int getSectionCount() {
-        return leftStr.length;
+        return leftItems.size();
     }
 
     @Override
     public int getCountForSection(int section) {
-        return rightStr[section].length;
+        return rightCate.get(section).getCategoryName().size();
     }
 
     @Override
@@ -61,11 +68,14 @@ public class MainSectionedAdapter extends SectionedBaseAdapter {
         } else {
             layout = (RelativeLayout) convertView;
         }
-        ((TextView) layout.findViewById(R.id.textItem)).setText(rightStr[section][position]);
+        ((TextView) layout.findViewById(R.id.textItem)).setText(rightCate.get(section).getCategoryName().get(position));
+        Glide.with(MyApp.getmContext())
+                .load(rightCate.get(section).getCategoryUrl().get(position))
+                .into((ImageView) layout.findViewById(R.id.kindpage_s_img));
         layout.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View arg0) {
-                Toast.makeText(mContext, rightStr[section][position], Toast.LENGTH_SHORT).show();
+                Toast.makeText(mContext, rightCate.get(section).getCategoryName().get(position), Toast.LENGTH_SHORT).show();
             }
         });
         return layout;
@@ -82,7 +92,7 @@ public class MainSectionedAdapter extends SectionedBaseAdapter {
             layout = (LinearLayout) convertView;
         }
         layout.setClickable(false);
-        ((TextView) layout.findViewById(R.id.textItem)).setText(leftStr[section]);
+        ((TextView) layout.findViewById(R.id.textItem)).setText(leftItems.get(section));
         return layout;
     }
 

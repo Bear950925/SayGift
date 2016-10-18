@@ -2,6 +2,7 @@ package dla.saygift.kindpage.single;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
@@ -28,6 +29,9 @@ public class PinnedHeaderListView extends ListView implements OnScrollListener {
         public int getCount();
 
     }
+
+    ListView listView;
+    RecyclerView recyclerView;
 
     private PinnedSectionedHeaderAdapter mAdapter;
     private View mCurrentHeader;

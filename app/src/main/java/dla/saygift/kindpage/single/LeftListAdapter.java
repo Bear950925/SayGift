@@ -2,12 +2,15 @@ package dla.saygift.kindpage.single;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+
+import java.util.ArrayList;
 
 import dla.saygift.R;
 
@@ -23,20 +26,24 @@ public class LeftListAdapter extends BaseAdapter {
     boolean[] flagArray;
     private Context context;
 
-    public LeftListAdapter(Context context, String[] leftStr, boolean[] flagArray) {
-        this.leftStr = leftStr;
+    ArrayList<String> leftItems;
+    ArrayList<Boolean> flags;
+
+    public LeftListAdapter(Context context, ArrayList<String> leftStr, ArrayList<Boolean> flagArray) {
+        this.leftItems = leftStr;
         this.context = context;
-        this.flagArray = flagArray;
+        this.flags = flagArray;
+        Log.d("LeftListAdapter", "leftItems.size():" + leftItems.size());
     }
 
     @Override
     public int getCount() {
-        return leftStr.length;
+        return leftItems.size();
     }
 
     @Override
     public Object getItem(int arg0) {
-        return leftStr[arg0];
+        return leftItems.get(arg0);
     }
 
     @Override
@@ -63,8 +70,8 @@ public class LeftListAdapter extends BaseAdapter {
         private TextView left_list_item;
 
         public void updataView(final int position) {
-            left_list_item.setText(leftStr[position]);
-            if (flagArray[position]) {
+            left_list_item.setText(leftItems.get(position));
+            if (flags.get(position)) {
                 left_list_item.setBackgroundResource(R.drawable.homepage_selected_channels_category);
             } else {
                 left_list_item.setBackgroundColor(Color.WHITE);

@@ -24,6 +24,7 @@ public class URLValues {
     public static final String FUNNY_URL = "http://api.liwushuo.com/v2/channels/126/items_v2?gender=1&generation=2&limit=20&offset=0";
     public static final String TECHNOLOGY_URL = "http://api.liwushuo.com/v2/channels/28/items_v2?gender=1&generation=2&limit=20&offset=0";
     public static final String MENGMENGDA_URL = "http://api.liwushuo.com/v2/channels/11/items_v2?gender=1&generation=2&limit=20&offset=0";
+    public static final String LOVE_BOOK_ULR = "http://api.liwushuo.com/v2/channels/124/items_v2?gender=1&generation=2&limit=20&offset=0";
 
 }
 

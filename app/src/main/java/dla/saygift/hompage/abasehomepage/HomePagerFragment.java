@@ -21,6 +21,7 @@ import dla.saygift.baseclass.BaseFragment;
 import dla.saygift.R;
 import dla.saygift.hompage.aselected.baseselected.BaseSelected;
 import dla.saygift.hompage.channels.AnotherChannels;
+import dla.saygift.personpage.PersonPageFragment;
 import dla.saygift.volleysingle.VolleySingleTon;
 
 /**
@@ -37,7 +38,7 @@ public class HomePagerFragment extends BaseFragment {
 
     @Override
     protected int setLayout() {
-        return R.layout.homepage;
+        return R.layout.homepage_base;
     }
 
     @Override
@@ -66,6 +67,8 @@ public class HomePagerFragment extends BaseFragment {
                         Gson gson = new Gson();
 
                         SearchBean searchBean = gson.fromJson(response, SearchBean.class);
+
+                        Log.d("HomePagerFragment", searchBean.getData().getPlaceholder());
 
                         editText.setHint(searchBean.getData().getPlaceholder());
 
@@ -106,7 +109,8 @@ public class HomePagerFragment extends BaseFragment {
                                 fragments.add(new BaseSelected());
                                 break;
                             default:
-                                AnotherChannels anotherChannels = new AnotherChannels(i);
+                                AnotherChannels anotherChannels = new AnotherChannels();
+                                anotherChannels.setColumns(i);
                                 fragments.add(anotherChannels);
                                 break;
                         }

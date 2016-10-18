@@ -45,6 +45,7 @@ public class AnotherChannels extends BaseFragment {
         columnsArrayList.add(URLValues.FUNNY_URL);
         columnsArrayList.add(URLValues.TECHNOLOGY_URL);
         columnsArrayList.add(URLValues.MENGMENGDA_URL);
+        columnsArrayList.add(URLValues.LOVE_BOOK_ULR);
 
     }
 
@@ -52,8 +53,7 @@ public class AnotherChannels extends BaseFragment {
         super();
     }
 
-    public AnotherChannels(int columns) {
-        super();
+    public void setColumns(int columns) {
         Columns = columns;
     }
 
@@ -78,6 +78,8 @@ public class AnotherChannels extends BaseFragment {
 
         setColumnsArrayList();
 
+        Log.d("AnotherChannels", "1");
+
         StringRequest stringRequest = new StringRequest(columnsArrayList.get(Columns), new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -88,6 +90,7 @@ public class AnotherChannels extends BaseFragment {
                 channelsSelectedBean = new ChannelsSelectedBean();
 
                 for (int i = 0; i < channelsBean.getData().getItems().size(); i++) {
+
 
                     try {
                         channelsSelectedBean.getHomepage_another_channels_columns_category()
@@ -163,7 +166,10 @@ public class AnotherChannels extends BaseFragment {
             }
         });
 
+        Log.d("AnotherChannels", "2");
+
         VolleySingleTon.getInstance().addQueue(stringRequest);
+        Log.d("AnotherChannels", "3");
 
     }
 }
