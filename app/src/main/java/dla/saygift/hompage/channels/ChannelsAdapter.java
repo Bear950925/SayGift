@@ -2,7 +2,6 @@ package dla.saygift.hompage.channels;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.text.Layout;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,7 +11,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
-import dla.saygift.MyApp;
+import dla.saygift.volleysingle.MyApp;
 import dla.saygift.R;
 
 /**

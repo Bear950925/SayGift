@@ -9,9 +9,8 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
-import dla.saygift.MyApp;
+import dla.saygift.volleysingle.MyApp;
 import dla.saygift.R;
-import dla.saygift.listpage.ContentFragmentAdapter;
 
 /**
  * Created by dllo on 16/10/13.

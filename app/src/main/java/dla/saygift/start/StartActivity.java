@@ -80,4 +80,10 @@ public class StartActivity extends BaseFragmentActivity {
             cancel(true);
         }
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        finish();
+    }
 }

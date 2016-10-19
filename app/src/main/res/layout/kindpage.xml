@@ -17,7 +17,16 @@
 
     </android.support.design.widget.TabLayout>
 
-    <include layout="@layout/kindpage_raiders_title" android:id="@+id/kindpage_title"/>
+    <TextView
+        android:layout_margin="10dp"
+        android:paddingLeft="150dp"
+        android:hint="search"
+        android:id="@+id/kp_raider_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@mipmap/icon_searched"
+        android:background="@drawable/shape_kp_raider_title"/>
+    <!--<include layout="@layout/kindpage_raiders_title" android:id="@+id/kindpage_title"/>-->
 
     <android.support.v4.view.ViewPager
 

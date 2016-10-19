@@ -22,10 +22,10 @@
         android:layout_gravity="center"
         android:layout_width="0dp"
         android:hint="搜索"
-        android:focusableInTouchMode="false"
         android:drawableLeft="@mipmap/icon_searched"
         android:layout_height="wrap_content"
         android:layout_weight="0.7"
+        android:focusableInTouchMode="false"
         android:background="@drawable/shape_homepage_title"/>
 
     <ImageView

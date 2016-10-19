@@ -1,6 +1,5 @@
 package dla.saygift.kindpage.raiders;
 
-import android.media.Image;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +8,7 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 
-import dla.saygift.MyApp;
+import dla.saygift.volleysingle.MyApp;
 import dla.saygift.R;
 
 /**

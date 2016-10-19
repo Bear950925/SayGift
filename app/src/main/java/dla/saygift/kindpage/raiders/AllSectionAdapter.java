@@ -1,6 +1,5 @@
 package dla.saygift.kindpage.raiders;
 
-import android.net.wifi.p2p.WifiP2pManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,7 +16,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-import dla.saygift.MyApp;
+import dla.saygift.volleysingle.MyApp;
 import dla.saygift.R;
 
 /**

@@ -113,7 +113,8 @@ public class BuildActivity extends BaseFragmentActivity implements BottomNavigat
                 break;
         }
 
-        transaction.commit();
+            transaction.commit();
+
     }
 
     @Override

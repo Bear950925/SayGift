@@ -4,7 +4,7 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 
-import dla.saygift.MyApp;
+import dla.saygift.volleysingle.MyApp;
 import dla.saygift.R;
 import dla.saygift.baseclass.BaseFragment;
 

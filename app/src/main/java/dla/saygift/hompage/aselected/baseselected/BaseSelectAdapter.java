@@ -19,7 +19,7 @@ import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
-import dla.saygift.MyApp;
+import dla.saygift.volleysingle.MyApp;
 import dla.saygift.R;
 import dla.saygift.hompage.aselected.firstbanner.BannerFragment;
 import dla.saygift.hompage.aselected.firstbanner.FirstBannerAdapter;

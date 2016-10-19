@@ -4,8 +4,6 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 
-import dla.saygift.MyApp;
-
 /**
  * Created by dllo on 16/9/27.
  */

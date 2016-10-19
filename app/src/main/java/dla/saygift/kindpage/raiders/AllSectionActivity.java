@@ -89,6 +89,7 @@ public class AllSectionActivity extends BaseFragmentActivity {
 
                                 try {
                                     JSONObject jsonObject = new JSONObject(response);
+
                                     jsonObject = jsonObject.getJSONObject("data");
                                     JSONObject jsonObject1 = jsonObject.getJSONObject("paging");
                                     nextUrl = jsonObject1.getString("next_url");
