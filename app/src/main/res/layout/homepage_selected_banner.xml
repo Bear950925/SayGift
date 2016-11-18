@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginTop="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="185dp">
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/homepage_selected_vp"
+        android:layout_width="match_parent"
+        android:layout_height="185dp">
+
+    </android.support.v4.view.ViewPager>
+
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:id="@+id/homepage_selected_doa0"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginLeft="160dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/banner_icon_selected"
+        android:visibility="invisible" />
+
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:id="@+id/homepage_selected_doa1"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@id/homepage_selected_doa0"
+        android:background="@drawable/banner_icon_normal"
+        android:visibility="invisible" />
+
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:id="@+id/homepage_selected_doa2"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@id/homepage_selected_doa1"
+        android:background="@drawable/banner_icon_normal"
+        android:visibility="invisible" />
+
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:id="@+id/homepage_selected_doa3"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginBottom="10dp"
+
+        android:layout_toRightOf="@id/homepage_selected_doa2"
+        android:background="@drawable/banner_icon_normal"
+        android:visibility="invisible" />
+
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:id="@+id/homepage_selected_doa4"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginBottom="10dp"
+
+        android:layout_toRightOf="@id/homepage_selected_doa3"
+        android:background="@drawable/banner_icon_normal"
+        android:visibility="invisible" />
+
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:id="@+id/homepage_selected_doa5"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@id/homepage_selected_doa4"
+        android:background="@drawable/banner_icon_normal"
+        android:visibility="invisible" />
+
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:id="@+id/homepage_selected_doa6"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginBottom="10dp"
+        android:layout_toRightOf="@id/homepage_selected_doa5"
+        android:background="@drawable/banner_icon_normal"
+        android:visibility="invisible" />
+
+</RelativeLayout>

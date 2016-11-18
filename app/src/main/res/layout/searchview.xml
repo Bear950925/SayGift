@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="#0AFF0000">
+
+            <ImageView
+                android:id="@+id/search_back_img"
+                android:background="@mipmap/abc_ic_ab_back_holo_light"
+                android:layout_gravity="center"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+
+            <EditText
+                android:layout_margin="5dp"
+                android:id="@+id/search_ed"
+                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:drawableLeft="@mipmap/icon_searched"
+                android:hint="请输入吧"
+                android:background="@drawable/shape_homepage_title"/>
+
+            <ImageView
+                android:layout_gravity="bottom"
+                android:id="@+id/search_img"
+                android:background="@mipmap/abc_ic_clear_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/search_delete_tv"
+        android:text="取消"
+        android:layout_gravity="center"
+        android:textSize="20sp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_margin="5dp"
+        android:id="@+id/search_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+</LinearLayout>

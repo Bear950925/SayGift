@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/kindpage_single_left_lv"
+        android:layout_weight="1.5"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:divider="@null">
+        
+    </ListView>
+    
+    <dla.saygift.kindpage.single.PinnedHeaderListView
+
+        android:id="@+id/kindpage_single_right_pv"
+        android:layout_width="0dp"
+        android:layout_weight="5"
+        android:layout_height="match_parent"
+        android:background="#12FF0000"
+        android:layout_marginLeft="5dp">
+
+    </dla.saygift.kindpage.single.PinnedHeaderListView>
+
+</LinearLayout>
